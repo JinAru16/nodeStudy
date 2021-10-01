@@ -3,7 +3,7 @@ const http = require('http');
 const express = require('express');
 const app = express();
 
-const users = ['Tom', 'Andy', 'Jessica', 'Paul', 'Tony', 'IU', 'Jane', 'Bob'];
+const users = ['Tom', 'Andy', 'Jessica', 'Paul'];
 
 
 app.get('/', (request, response) => {
@@ -11,7 +11,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/users', (request, response) =>{
-    response.end(`<h1>${users}</h1>`)
+    response.end(`<h1>${userName}</h1>`)
 });
 
 app.get('/users/:id', (request, response) =>{
@@ -26,4 +26,3 @@ app.get('*', (request, response) => {
 });
 
 app.listen(3000);
-
